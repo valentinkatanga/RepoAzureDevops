@@ -1,5 +1,5 @@
 trigger: 
--master
+ - master
 
 pool:
 vmImage: 'ubuntu-latest'
@@ -11,9 +11,9 @@ jobs:
      - script: echo Hello, CI/CD!
       displayName: 'Run a one-line script'
 
-- job: Deploy 
- displayName: 'Deploy job'
- dependsOn: Build
- steps:
-    - script: echo Hello, Deployment!
-     displayName: 'Run a deployment script'
+ - job: Deploy 
+  displayName: 'Deploy job'
+  dependsOn: Build
+  steps:
+     - script: echo Hello, Deployment!
+      displayName: 'Run a deployment script'
